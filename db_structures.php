@@ -12,23 +12,23 @@ $dog_query = $db->prepare("SELECT * FROM `dogs`");
 $dog_result = $dog_query->execute();
 
 if ($dog_result){
-$data = $dog_query -> fetchAll();
+$dog_data = $dog_query -> fetchAll();
 echo '<pre>';
-var_dump($data);}
+var_dump($dog_data);}
 
 $cat_query = $db->prepare("SELECT * FROM `cats`");
 
 $cat_result = $cat_query->execute();
 if ($cat_result){
-$data = $cat_query -> fetchAll();
+$cat_data = $cat_query -> fetchAll();
 echo '<pre>';
-var_dump($data);}
+var_dump($cat_data);}
 
 $owners_query = $db->prepare("SELECT * FROM `owners`");
 
 $owner_result = $owners_query->execute();
 
 if ($owner_result){
-$data = $owners_query -> fetchAll();
+$owner_data = $owners_query -> fetchAll();
 echo '<pre>';
-var_dump($data);}
+var_dump($owner_data);}
