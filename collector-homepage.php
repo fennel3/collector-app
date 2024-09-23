@@ -51,8 +51,19 @@ if ($owner_result){
 
 <div style="width: 100%; height: 20%; display: flex">
     <?php
-    foreach ($dog_data as $dog)
-        echo '<div style="width: 100px; height: 100px; display: flex; justify-content: center;  background-color: antiquewhite; padding: 10px; margin: 10px">' . $dog['dog_name'] . '</div>';
+    foreach ($dog_data as $dog) {
+        if ($dog['owner_id'] == 2) {
+            $belongs = 'I belong to fin';
+
+        } else {
+            $belongs = 'I belong to nan';
+        }
+
+        echo '<div style="width: 150px; height: 150px; display: flex; justify-content: center;
+              background-color: antiquewhite; padding: 10px; margin: 10px">'
+            . "dog name:" . '<br>' . $dog['dog_name'] . '<br>' . '<br>' . "dog breed:" . '<br>' . $dog['breed'] . '<br>' . '<br>' . $belongs . '</div>';
+    }
+
 
     '<pre>';
 
@@ -64,8 +75,26 @@ if ($owner_result){
 
 <div style="width: 100%; height: 20%; display: flex">
     <?php
-    foreach ($cat_data as $cat)
-        echo '<div style="width: 100px; height: 100px; display: flex; justify-content: center;  background-color: antiquewhite; padding: 10px; margin: 10px">' . $cat['cat_name'] . '</div>';
+    foreach ($cat_data as $cat) {
+        if ($cat['owner_id'] == 2) {
+            $belongs = 'I belong to fin';
+
+        } else {$belongs = 'I belong to nan';}
+        echo '<div style="width: 150px; height: 150px; display: flex; justify-content: center;  background-color: antiquewhite; padding: 10px; margin: 10px">' . '<br>' . "cat name:" . '<br>' . $cat['cat_name'] . '<br>' . '<br>' . "cat breed:" . '<br>' . $cat['breed'] . '<br>' . '<br>' .$belongs.'</div>';
+    }
+
+    '<pre>';
+
+    ?>
+
+</div>
+
+<h4>owners</h4>
+
+<div style="width: 100%; height: 20%; display: flex">
+    <?php
+    foreach ($owner_data as $owner)
+        echo '<div style="width: 150px; height: 150px; display: flex; justify-content: center;  background-color: antiquewhite; padding: 10px; margin: 10px">' . '<br>' . $owner['owner_name'] . '</div>';
 
     '<pre>';
 
