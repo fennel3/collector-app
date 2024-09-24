@@ -1,7 +1,8 @@
 <?php
 require_once 'src/db_structures.php';
 //function that converts the dog array into its individual fields from the db_functions
-function returnDogs($dog_data){
+function returnDogs(array $dog_data): string
+{
 
     $dog_string = '';
 
@@ -19,7 +20,7 @@ function returnDogs($dog_data){
 
 }
 //function that converts the cat array into its individual fields from the db_functions
-function returnCats($cat_data)
+function returnCats(array $cat_data): string
 {
     $cat_string = '';
     foreach ($cat_data as $cat) {
@@ -33,7 +34,7 @@ function returnCats($cat_data)
 }
 
 //function that converts the owners array into its individual fields from the db_functions
-function returnOwners($owner_data)
+function returnOwners(array $owner_data): string
 {
     $owner_string = '';
     {

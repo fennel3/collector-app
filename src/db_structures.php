@@ -13,7 +13,7 @@ function data()
 }
 
 //function that returns only the dog array from database
-function getDogData($db)
+function getDogData(PDO $db)
 {
     $dog_query = $db->prepare("SELECT * FROM `dogs`;");
     $dog_result = $dog_query->execute();
@@ -27,7 +27,7 @@ function getDogData($db)
 
 var_dump(getDogData(data()));
 //function that returns only the cat array from database
-function getCatData($db)
+function getCatData(PDO $db)
 {
     $cat_query =$db->prepare("SELECT * FROM `cats`;");
 
@@ -40,7 +40,7 @@ function getCatData($db)
     }
 }
 //function that returns only the owner array from database
-function getOwnerData($db)
+function getOwnerData(PDO $db)
 {
     $owners_query = $db->prepare("SELECT * FROM `owners`;");
 
