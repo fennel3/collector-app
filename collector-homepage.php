@@ -23,7 +23,7 @@ $db = data()
 
 <div class="item_container">
     <?php
-    returnDogs(getDogData($db));
+    echo returnDogs(getDogData($db));
 
     ?>
 
@@ -33,7 +33,7 @@ $db = data()
 
 <div class="item_container">
     <?php
-    returnCats(getCatData($db));
+    echo returnCats(getCatData($db));
 
     ?>
 
@@ -43,7 +43,7 @@ $db = data()
 
 <div class="item_container">
     <?php
-    returnOwners(getOwnerData($db));
+    echo returnOwners(getOwnerData($db));
 
     ?>
 

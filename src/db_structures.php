@@ -21,11 +21,11 @@ function getDogData($db)
     if ($dog_result) {
         $dog_data = $dog_query->fetchAll();
         return $dog_data;
-
-//        echo '<pre>';
-//        var_dump($dog_data);
     }
 }
+
+
+var_dump(getDogData(data()));
 //function that returns only the cat array from database
 function getCatData($db)
 {
