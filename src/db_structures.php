@@ -33,8 +33,6 @@ function getCatData(PDO $db)
     if ($cat_result){
         $cat_data = $cat_query -> fetchAll();
         return $cat_data;
-//        echo '<pre>';
-//        var_dump($cat_data);
     }
 }
 //function that returns only the owner array from database
@@ -47,8 +45,6 @@ function getOwnerData(PDO $db)
     if ($owner_result){
         $owner_data = $owners_query -> fetchAll();
         return $owner_data;
-//        echo '<pre>';
-//        var_dump($owner_data);
     }
 }
 

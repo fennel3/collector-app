@@ -1,7 +1,14 @@
 <?php
 require_once 'src/db_structures.php';
 require_once 'src/functions.php';
-$db = data()
+$db = data();
+$dog_SQL_table = getDogData($db);
+$cat_SQL_table = getCatData($db);
+$owner_SQL_table = getOwnerData($db);
+$dog_info = returnDogs($dog_SQL_table);
+$cat_info = returnCats($cat_SQL_table);
+$owner_info = returnOwners($owner_SQL_table);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +29,7 @@ $db = data()
 
 
 <div class="item_container">
-    <?php $dog_info = returnDogs(getDogData($db));
+    <?php
     echo  $dog_info;
 
     ?>
@@ -32,7 +39,7 @@ $db = data()
 <h4>cats</h4>
 
 <div class="item_container">
-    <?php $cat_info = returnCats(getCatData($db));
+    <?php
     echo $cat_info;
 
     ?>
@@ -42,7 +49,7 @@ $db = data()
 <h4>owners</h4>
 
 <div class="item_container">
-    <?php $owner_info = returnOwners(getOwnerData($db));
+    <?php
     echo $owner_info;
 
     ?>

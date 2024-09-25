@@ -17,8 +17,8 @@ class functionTest extends TestCase{
     {
         //make some inputs
         $dogs = [[
-            'dog_name' => 'rolly',
-            'breed' => 'laza',
+            'dog_name' => 'Rolly',
+            'breed' => 'King Charles',
             'owner_id' => 1
         ]];
 
@@ -29,7 +29,7 @@ class functionTest extends TestCase{
 
         // what do we acc get
         $expected = '<div class="collection_item">'
-            . "dog name:" . '<br>' . 'rolly' . '<br>' . '<br>' . "dog breed:" . '<br>' . 'laza' . '<br>' . '<br>' . 'I belong to nan' . '</div>';
+            . "dog name:" . '<br>' . 'Rolly' . '<br>' . '<br>' . "dog breed:" . '<br>' . 'King Charles' . '<br>' . '<br>' . 'I belong to nan' . '</div>';
 
         //compare actual with expected.
         $this->assertEquals($expected, $actual);
