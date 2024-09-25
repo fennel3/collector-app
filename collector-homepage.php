@@ -5,9 +5,13 @@ $db = data();
 $dog_SQL_table = getDogData($db);
 $cat_SQL_table = getCatData($db);
 $owner_SQL_table = getOwnerData($db);
+//the above gets the described arrays from SQL
+
+//the variables below iterates through and puts the SQL data into a readable format
 $dog_info = returnDogs($dog_SQL_table);
 $cat_info = returnCats($cat_SQL_table);
 $owner_info = returnOwners($owner_SQL_table);
+
 
 ?>
 
