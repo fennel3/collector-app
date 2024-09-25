@@ -1,6 +1,6 @@
 <?php
 //function that returns the database data
-function data()
+function data(): PDO
 {
     $db = new PDO(
         'mysql:host=DB;dbname=collectorapp',
@@ -15,7 +15,7 @@ function data()
 //function that returns only the dog array from database
 function getDogData(PDO $db)
 {
-    $dog_query = $db->prepare("SELECT * FROM `dogs`;");
+    $dog_query = $db->prepare("SELECT id, owner_id, name, breed FROM pet_names WHERE species_id = 2;");
     $dog_result = $dog_query->execute();
 
     if ($dog_result) {
@@ -24,12 +24,10 @@ function getDogData(PDO $db)
     }
 }
 
-
-var_dump(getDogData(data()));
 //function that returns only the cat array from database
 function getCatData(PDO $db)
 {
-    $cat_query =$db->prepare("SELECT * FROM `cats`;");
+    $cat_query =$db->prepare("SELECT id, owner_id, name, breed FROM pet_names WHERE species_id = 1;");
 
     $cat_result = $cat_query->execute();
     if ($cat_result){
@@ -42,7 +40,7 @@ function getCatData(PDO $db)
 //function that returns only the owner array from database
 function getOwnerData(PDO $db)
 {
-    $owners_query = $db->prepare("SELECT * FROM `owners`;");
+    $owners_query = $db->prepare("SELECT `id`, `name` FROM `owners`;");
 
     $owner_result = $owners_query->execute();
 

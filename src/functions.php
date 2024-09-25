@@ -1,6 +1,6 @@
 <?php
 require_once 'src/db_structures.php';
-//function that converts the dog array into its individual fields from the db_functions
+//function that converts the dogs array into its individual fields from the db_functions
 function returnDogs(array $dog_data): string
 {
 
@@ -15,7 +15,7 @@ function returnDogs(array $dog_data): string
         }
 
         $dog_string .= '<div class="collection_item">'
-            . "dog name:" . '<br>' . $dog['dog_name'] . '<br>' . '<br>' . "dog breed:" . '<br>' . $dog['breed'] . '<br>' . '<br>' . $belongs . '</div>';
+            . "dog name:" . '<br>' . $dog['name'] . '<br>' . '<br>' . "dog breed:" . '<br>' . $dog['breed'] . '<br>' . '<br>' . $belongs . '</div>';
     } return $dog_string;
 
 }
@@ -28,7 +28,7 @@ function returnCats(array $cat_data): string
             $belongs = 'I belong to fin';
 
         } else {$belongs = 'I belong to nan';}
-        $cat_string .=  '<div class="collection_item">' . "cat name:" . '<br>' . $cat['cat_name'] . '<br>' . '<br>' . "cat breed:" . '<br>' . $cat['breed'] . '<br>' . '<br>' .$belongs.'</div>';
+        $cat_string .=  '<div class="collection_item">' . "cat name:" . '<br>' . $cat['name'] . '<br>' . '<br>' . "cat breed:" . '<br>' . $cat['breed'] . '<br>' . '<br>' .$belongs.'</div>';
 
     } return $cat_string;
 }
@@ -39,6 +39,6 @@ function returnOwners(array $owner_data): string
     $owner_string = '';
     {
         foreach ($owner_data as $owner)
-            $owner_string .= '<div class="collection_item">' . '<br>' . $owner['owner_name'] . '</div>';
+            $owner_string .= '<div class="collection_item">' . '<br>' . $owner['name'] . '</div>';
     } return $owner_string;
 }

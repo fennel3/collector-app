@@ -8,7 +8,7 @@ require_once 'src/functions.php';
 
 use PHPUnit\Framework\TestCase;
 
-// give our adder test all the features that our testcase has.
+
 class functionTest extends TestCase{
     //Write your test here
     //test method must start with test
@@ -47,7 +47,7 @@ class functionTest extends TestCase{
 
         $actual = returnCats($cats);
 
-        //define the expected result
+
 
 
         // what do we acc get

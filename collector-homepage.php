@@ -22,8 +22,8 @@ $db = data()
 
 
 <div class="item_container">
-    <?php
-    echo returnDogs(getDogData($db));
+    <?php $dog_info = returnDogs(getDogData($db));
+    echo  $dog_info;
 
     ?>
 
@@ -32,8 +32,8 @@ $db = data()
 <h4>cats</h4>
 
 <div class="item_container">
-    <?php
-    echo returnCats(getCatData($db));
+    <?php $cat_info = returnCats(getCatData($db));
+    echo $cat_info;
 
     ?>
 
@@ -42,8 +42,8 @@ $db = data()
 <h4>owners</h4>
 
 <div class="item_container">
-    <?php
-    echo returnOwners(getOwnerData($db));
+    <?php $owner_info = returnOwners(getOwnerData($db));
+    echo $owner_info;
 
     ?>
 
