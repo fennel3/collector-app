@@ -21,50 +21,31 @@ $owner_info = returnOwners($owner_SQL_table);
 
 
 </head>
-<body>
+    <body>
+        <h1>Pet collection</h1>
+        <h4>dogs</h4>
 
-<h1>Pet collection</h1>
+        <div class="item_container">
+        <?php
+        echo  $dog_info;
+        ?>
+        </div>
 
-<h4>dogs</h4>
+        <h4>cats</h4>
 
+        <div class="item_container">
+        <?php
+        echo $cat_info;
+        ?>
+        </div>
 
-<div class="item_container">
-    <?php
-    echo  $dog_info;
+        <h4>owners</h4>
 
-    ?>
+        <div class="item_container">
+        <?php
+        echo $owner_info;
+        ?>
+        </div>
 
-</div>
-
-<h4>cats</h4>
-
-<div class="item_container">
-    <?php
-    echo $cat_info;
-
-    ?>
-
-</div>
-
-<h4>owners</h4>
-
-<div class="item_container">
-    <?php
-    echo $owner_info;
-
-    ?>
-
-</div>
-
-
-
-
-
-
-
-</body>
+    </body>
 </html>
-
-
-
-
