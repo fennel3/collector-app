@@ -13,9 +13,13 @@ function returnDogs(array $dog_data): string
         } else {
             $belongs = 'I belong to nan';
         }
-
-        $dog_string .= '<div class="collection_item">'
-            . "dog name:" . '<br>' . $dog['name'] . '<br>' . '<br>' . "dog breed:" . '<br>' . $dog['breed'] . '<br>' . '<br>' . $belongs . '</div>';
+        $dog_string .=
+        '<div class="collection_item">' .
+        'dog name:' . '<br>' . $dog['name'] . '<br>' . '<br>' .
+        'dog breed:' . '<br>' . $dog['breed'] . '<br>' . '<br>' .
+        $belongs .
+        '</div>  
+            <img class="collection_item_image" src="' . $dog['image'] . '">';
     } return $dog_string;
 
 }
@@ -28,7 +32,14 @@ function returnCats(array $cat_data): string
             $belongs = 'I belong to fin';
 
         } else {$belongs = 'I belong to nan';}
-        $cat_string .=  '<div class="collection_item">' . "cat name:" . '<br>' . $cat['name'] . '<br>' . '<br>' . "cat breed:" . '<br>' . $cat['breed'] . '<br>' . '<br>' .$belongs.'</div>';
+        $cat_string .=
+            '<div class="collection_item">' .
+            'cat name:' . '<br>' . $cat['name'] . '<br>' . '<br>' .
+            'cat breed:' . '<br>' . $cat['breed'] . '<br>' . '<br>' .
+            $belongs .
+            '</div>  
+            <img class="collection_item_image" src="' . $cat['image'] . '">';
+
 
     } return $cat_string;
 }

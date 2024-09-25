@@ -27,6 +27,7 @@ $owner_info = returnOwners($owner_SQL_table);
 </head>
     <body>
         <h1>Pet collection</h1>
+
         <h4>dogs</h4>
 
         <div class="item_container">
