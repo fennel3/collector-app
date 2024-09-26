@@ -27,29 +27,30 @@ $owner_info = returnOwners($owner_SQL_table);
 </head>
     <body>
         <h1>Pet collection</h1>
+        <p>A collection of pets who are owened by my gran or myself!</p>
 
-        <h4>dogs</h4>
+        <h3>dogs</h3>
 
         <div class="item_container">
-        <?php
-        echo  $dog_info;
-        ?>
+            <?php
+                echo  $dog_info;
+            ?>
         </div>
 
-        <h4>cats</h4>
+        <h3>cats</h3>
 
         <div class="item_container">
-        <?php
-        echo $cat_info;
-        ?>
+            <?php
+                echo $cat_info;
+            ?>
         </div>
 
         <h4>owners</h4>
 
         <div class="item_container">
-        <?php
-        echo $owner_info;
-        ?>
+            <?php
+                echo $owner_info;
+            ?>
         </div>
 
     </body>

@@ -47,13 +47,3 @@ function getOwnerData(PDO $db)
         return $owner_data;
     } else return 'could not return owner data';
 }
-
-
-
-
-
-
-
-
-
-
