@@ -1,19 +1,15 @@
 <?php
-//function that returns the database data
 function data(): PDO
 {
     $db = new PDO(
         'mysql:host=DB;dbname=collectorapp',
         'root',
         'password'
-
     );
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
 }
-
-//function that returns only the dog array from database
-function getDogData(PDO $db)
+function getDogs(PDO $db)
 {
     $dog_query = $db->prepare("SELECT `id`, `owner_id`, `name`, `breed`, `image` FROM `pet_names` WHERE `species_id` = 2;");
     $dog_result = $dog_query->execute();
@@ -23,9 +19,7 @@ function getDogData(PDO $db)
         return $dog_data;
     } else return 'could not return dog data';
 }
-
-//function that returns only the cat array from database
-function getCatData(PDO $db)
+function getCats(PDO $db)
 {
     $cat_query =$db->prepare("SELECT `id`, `owner_id`, `name`, `breed`, `image` FROM `pet_names` WHERE `species_id` = 1;");
 
@@ -35,8 +29,7 @@ function getCatData(PDO $db)
         return $cat_data;
     } else return 'could not return cat data';
 }
-//function that returns only the owner array from database
-function getOwnerData(PDO $db)
+function getOwners(PDO $db)
 {
     $owners_query = $db->prepare("SELECT `id`, `name` FROM `owners`;");
 

@@ -14,7 +14,7 @@ class functionNameTest extends TestCase{
             'image' => 'rolly.jpeg'
         ]];
 
-        $actual = returnDogs($dogs);
+        $actual = displayDogs($dogs);
 
         $expected = '<div class="collection_item">' .
             '<h4>Dog name:</h4>' . '<p>Rolly</p>' .
@@ -34,7 +34,7 @@ class functionNameTest extends TestCase{
             'image' => 'boggle.jpeg'
         ]];
 
-        $actual = returnCats($cats);
+        $actual = displayCats($cats);
 
         $expected = '<div class="collection_item">' .
             '<h4>Cat name:</h4>' . '<p>Boggle</p>' .

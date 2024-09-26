@@ -2,15 +2,12 @@
 require_once 'src/db_structures.php';
 require_once 'src/functions.php';
 $db = data();
-$dog_SQL_table = getDogData($db);
-$cat_SQL_table = getCatData($db);
-$owner_SQL_table = getOwnerData($db);
-//the above gets the described arrays from SQL
-
-//the variables below iterates through and puts the SQL data into a readable format
-$dog_info = returnDogs($dog_SQL_table);
-$cat_info = returnCats($cat_SQL_table);
-$owner_info = returnOwners($owner_SQL_table);
+$dog_SQL_table = getDogs($db);
+$cat_SQL_table = getCats($db);
+$owner_SQL_table = getOwners($db);
+$dog_info = displayDogs($dog_SQL_table);
+$cat_info = displayCats($cat_SQL_table);
+$owner_info = displayOwners($owner_SQL_table);
 
 
 ?>
