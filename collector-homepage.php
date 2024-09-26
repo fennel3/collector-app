@@ -27,7 +27,7 @@ $owner_info = returnOwners($owner_SQL_table);
 </head>
     <body>
         <h1>Pet collection</h1>
-        <p>A collection of pets who are owened by my gran or myself!</p>
+        <p>A collection of pets who are owned by my gran or myself!</p>
 
         <h3>dogs</h3>
 
