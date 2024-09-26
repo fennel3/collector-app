@@ -23,5 +23,14 @@ $pet_info = displayPets($pet_SQL_table);
                 echo  $pet_info;
             ?>
         </div>
+        <form action="index.php" method="post">
+            <label for="petname">Pet name</label>
+            <input type="text" id="name" name="petname"/>
+            <input type="submit" value="submit" />
+            <?php
+                echo var_dump($_POST);
+
+            ?>
+        </form>
     </body>
 </html>

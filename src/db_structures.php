@@ -19,3 +19,15 @@ function getPet(PDO $db)
         return $pet_data;
     } else return 'could not return cat data';
 }
+
+
+$addition = $_POST['petname'];
+echo ($addition);
+function getUserInput($db, $addition)
+{
+    $cat_query =$db->prepare("INSERT INTO `pet_names` (`name`) values ($addition);");
+    $cat_query->execute();
+
+}
+
+getUserInput($addition);

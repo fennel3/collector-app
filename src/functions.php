@@ -1,5 +1,6 @@
 <?php
 require_once 'db_structures.php';
+$db = data();
 $pets = getPet(data());
 function displayPets(array $pets): string
 {
@@ -18,3 +19,12 @@ function displayPets(array $pets): string
     }
     return $pet_string;
 }
+
+$addition = $_POST['petname'];
+echo ($addition);
+
+"INSERT INTO `pet_names` (`name`) values ($addition);";
+
+
+
+
