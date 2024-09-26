@@ -7,12 +7,14 @@ function displayPets(array $pets): string
     foreach ($pets as $pet)
     {
         $pet_string .=
-            '<div class="collection_item">' .
-            '<h4>'.$pet['species'].' name:</h4>' . '<p>'.$pet['name'].'</p>' .
-            '<h4>'.$pet['species'].' breed:</h4>' . '<p>'.$pet['breed'].'</p>' .
-            '<em>'.'</em>' .
-            '</div>  
-                <img class="collection_item_image" src="' . $pet['image'] . '">';
+            '<div>'.
+                '<div class="collection_item">' .
+                '<h4>'.$pet['species'].' name:</h4>' . '<p>'.$pet['name'].'</p>' .
+                '<h4>'.$pet['species'].' breed:</h4>' . '<p>'.$pet['breed'].'</p>' .
+                '<em>'.'</em>' .
+                '</div>  
+                    <img class="collection_item_image" src="' . $pet['image'] . '">' .
+            '</div>';
     }
     return $pet_string;
 }

@@ -17,10 +17,13 @@ $pet_info = displayPets($pet_SQL_table);
     <body>
         <h1>Pet collection</h1>
         <p>A collection of pets who are owned by my gran or myself!</p>
-        <h3>Dogs</h3>
+        <h3>Pets</h3>
+
         <div class="item_container">
             <?php
                 echo  $pet_info;
             ?>
+        </div>
+
     </body>
 </html>
