@@ -1,12 +1,10 @@
 <?php
 require_once 'src/functions.php';
 use PHPUnit\Framework\TestCase;
-
 class functionNameTest extends TestCase
 {
     public function testPetInfoIsDisplayedCorrectly(): void
     {
-
         $pet = [[
             'name' => 'Rolly',
             'breed' => 'King Charles',

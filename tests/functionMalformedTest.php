@@ -18,5 +18,4 @@ class functionMalformedTest extends TestCase{
 
         displayPets('frogs');
     }
-
 }
