@@ -9,14 +9,14 @@ class functionMalformedTest extends TestCase{
     {
         $this->expectException(TypeError::class);
 
-        returnCats(123);
+        displayPets(123);
     }
 
     public function testDogsMalformedInputs(): void
     {
         $this->expectException(TypeError::class);
 
-        returnDogs(123);
+        displayPets('frogs');
     }
 
 }
