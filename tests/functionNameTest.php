@@ -17,16 +17,14 @@ class functionNameTest extends TestCase{
         $actual = returnDogs($dogs);
 
         $expected = '<div class="collection_item">' .
-            'dog name:' . '<br>' . 'Rolly' . '<br>' . '<br>' .
-            'dog breed:' . '<br>' . 'King Charles' . '<br>' . '<br>' .
-            'I belong to nan' .
+            '<h4>Dog name:</h4>' . '<p>Rolly</p>' .
+            '<h4>Dog breed:</h4>' . '<p>King Charles</p>' .
+            '<em>I belong to Nan</em>' .
             '</div>  
-            <img class="collection_item_image" src="' . 'rolly.jpeg' . '">';
+            <img class="collection_item_image" src="rolly.jpeg">';
 
         $this->assertEquals($expected, $actual);
-
     }
-
     public function testCatInfoIsCorrect(): void
     {
         $cats = [[
@@ -39,15 +37,12 @@ class functionNameTest extends TestCase{
         $actual = returnCats($cats);
 
         $expected = '<div class="collection_item">' .
-            'cat name:' . '<br>' . 'Boggle' . '<br>' . '<br>' .
-            'cat breed:' . '<br>' . 'Ragdoll' . '<br>' . '<br>' .
-            'I belong to fin' .
+            '<h4>Cat name:</h4>' . '<p>Boggle</p>' .
+            '<h4>Cat breed:</h4>' . '<p>Ragdoll</p>' .
+            '<em>I belong to Finn</em>' .
             '</div>  
-            <img class="collection_item_image" src="' . 'boggle.jpeg' . '">';
+            <img class="collection_item_image" src="boggle.jpeg">';
         $this->assertEquals($expected, $actual);
 
     }
 }
-
-
-
