@@ -4,11 +4,13 @@
 
 .collection_item {
     width: 150px;
-    height: 150px;
+    height: 250px;
     background-color: antiquewhite;
     padding: 5px;
     border-style: solid;
     border-width: 2px;
+    margin: 20px;
+    box-shadow: 10px 10px 5px #e3ce76;
 }
 
 .collection_item p {
@@ -32,6 +34,7 @@
     margin-right: 50px;
     margin-bottom: 20px;
     object-fit: cover;
+    box-shadow: 10px 10px 5px #e3ce76;
 }
 
 .item_container {

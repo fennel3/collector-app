@@ -11,11 +11,14 @@ function displayPets(array $pets): string
             '<div>'.
                 '<div class="collection_item">' .
                 '<h4>'.$pet['species'].' name:</h4>' . '<p>'.$pet['name'].'</p>' .
-                '<h4>'.$pet['species'].' breed:</h4>' . '<p>'.$pet['breed'].'</p>' .
-                '<em>'.'</em>' .
-                '</div>  
-                    <img class="collection_item_image" src="' . $pet['image'] . '">' .
-            '</div>';
+                '<h4>'.$pet['species'].' breed:</h4>' . '<p>'.$pet['breed'].'</p>';
+        if ($pet['image']) {
+            $pet_string .= '<img class="collection_item_image" src="' . $pet['image'] . '">' . '</div>';
+        } else {
+            $pet_string .= '<p>No image</p></div>';
+        };
+        $pet_string .= '</div>';
+
     }
     return $pet_string;
 }
