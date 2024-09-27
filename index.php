@@ -17,18 +17,17 @@ $pet_info = displayPets($pet_SQL_table);
     <body>
         <h1>Pet collection</h1>
         <p>A collection of pets who are owned by my gran or myself!</p>
+
         <h3>Pets</h3>
+
         <div class="item_container">
             <?php
                 echo  $pet_info;
             ?>
         </div>
-        <form action="index.php" method="post">
-            <label for="petname">Pet name</label>
-            <input type="text" id="name" name="petname"/>
-            <input type="submit" value="submit" />
+
             <?php
-                echo var_dump($_POST);
+            echo insertMaker();
 
             ?>
         </form>

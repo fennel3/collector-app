@@ -21,13 +21,28 @@ function getPet(PDO $db)
 }
 
 
-$addition = $_POST['petname'];
-echo ($addition);
-function getUserInput($db, $addition)
-{
-    $cat_query =$db->prepare("INSERT INTO `pet_names` (`name`) values ($addition);");
-    $cat_query->execute();
+if (isset($_POST['petname'], $_POST['breed'], $_POST['species'])){
+    $petname = $_POST['petname'];
+    $petbreed = $_POST['breed'];
+    $petspecies = $_POST['species'];
 
+
+    getUserInput(data(), $petname, $petbreed, $petspecies);
+    echo 'you have added ' . $petname . ' to the database';
 }
 
-getUserInput($addition);
+
+
+function getUserInput($db, $petname, $petbreed, $petspecies)
+{
+    $cat_query =$db->prepare("INSERT INTO `pet_names` (`name`, `breed`, `species_id`) VALUES (:petname, :petbreed, :petspecies);");
+
+    $cat_query->execute
+    ([
+        'petname' => $petname,
+        'petbreed' => $petbreed,
+        'petspecies' => $petspecies
+
+    ]);
+}
+
