@@ -20,15 +20,13 @@ function displayPets(array $pets): string
     return $pet_string;
 }
 function insertMaker(){
-    return '<form action="index.php" method="post">
-                <label for="petname">Add another pet name</label>
-                <input type="text" id="name" name="petname"/>
+    return '<form action="index.php" method="post" class="banner">
+                <label for="petname" >Add another pet name</label>
+                <input type="text" name="petname" required/>
 
                 <label for="breed">Add the breed</label>
-                <input type="text" id="name" name="breed"/>
+                <input type="text" name="breed" required/>
 
-                
-                
                 <label for="species">Select the species</label>
                     <select id="species" name="species" required>
                         <option value="" disabled selected>Select a species</option>
