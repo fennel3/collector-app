@@ -13,9 +13,9 @@ function displayPets(array $pets): string
                 '<h4>'.$pet['species'].' name:</h4>' . '<p>'.$pet['name'].'</p>' .
                 '<h4>'.$pet['species'].' breed:</h4>' . '<p>'.$pet['breed'].'</p>';
         if ($pet['image']) {
-            $pet_string .= '<img class="collection_item_image" src="' . $pet['image'] . '">' . '</div>';
+            $pet_string .= '<img alt="Image of a pet" class="collection_item_image" src="' . $pet['image'] . '">' . '</div>';
         } else {
-            $pet_string .= '<p>No image</p></div>';
+            $pet_string .= '<p>No image available</p></div>';
         };
         $pet_string .= '</div>';
 
